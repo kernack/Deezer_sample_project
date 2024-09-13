@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wyniki wyszukiwania dla {{ artist_name }}</title>
+</head>
+<body>
+    <h1>Wyniki wyszukiwania dla: {{ artist_name }}</h1>
+    <ul>
+        {% for track in results %}
+        <li>{{ track['artist']['name'] }} - {{ track['title'] }} (Album: {{ track['album']['title'] }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
